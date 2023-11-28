@@ -24,7 +24,7 @@
     {% endif %}
 
     {{lst}}
-    <h1> {{ lst | join:" - " }} </h1>
+    <h1> {{ lst | join:" // " }} </h1>
     <h1>{{ birthday | date:"D d M Y" }}</h1>
 
     {% comment %} <h1>{{ val | default: "nothing here" }}</h1> {% endcomment %}
@@ -33,6 +33,15 @@
     <h1>{{'happy coding zaima. I love u to see doing code with me and cook delicious food for me.' | truncatewords:8}}</h1>
 
     <h1>{{ "I love you Zaima" | cut:" " }}</h1>
+
+{% comment %} More practice home again {% endcomment %}
+
+    <h3 style='color:pink;'> Birthdate: <i>{{ birthday|date:"SHORT_DATE_FORMAT" }}</i></h3>
+
+    <h3> {{ 20 | add:"5" }} </h3>
+    {% comment %} This works on through loop <h3> {{ [1, 2, 3] | add:"[4, 5, 6]" }} </h3> {% endcomment %}
+
+    
 
 {% comment %} forloop {% endcomment %}
 
