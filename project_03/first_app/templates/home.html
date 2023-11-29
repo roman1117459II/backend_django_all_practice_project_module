@@ -30,9 +30,9 @@
     {% comment %} <h1>{{ val | default: "nothing here" }}</h1> {% endcomment %}
     <h1>{{ val | length }}</h1>
 
-    <h1>{{'happy coding zaima. I love u to see doing code with me and cook delicious food for me.' | truncatewords:8}}</h1>
+    <h1>{{'happy coding ratul. I love u to see doing code with me and cook delicious food for me.' | truncatewords:8}}</h1>
 
-    <h1>{{ "I love you Zaima" | cut:" " }}</h1>
+    <h1>{{ "I love you ratul" | cut:" " }}</h1>
 
 {% comment %} More practice home again {% endcomment %}
 
@@ -40,6 +40,48 @@
 
     <h3> {{ 20 | add:"5" }} </h3>
     {% comment %} This works on through loop <h3> {{ [1, 2, 3] | add:"[4, 5, 6]" }} </h3> {% endcomment %}
+    
+    <h3>{{ author | capfirst }} </h3>
+    <h3>{{ 'cMhristmas' | capfirst }} </h3><br>
+    <h3> {{ sentence | cut:"hate" }} </h3><br>
+    
+    <h3>dict sorted by its name order:  {{ courses | dictsort:"name" }} </h3><br>
+    
+
+    {% autoescape off %}
+        <h1>{{ heading|escape }}</h1>
+        <h1>{{ heading }}</h1>
+    {% endautoescape %}
+
+    
+
+    <h3>first filter to get the first item from the list:  {{ lst | first }} </h3><br>
+
+    <h3>length filter to get the length from the list:  {{ lst | length }} </h3><br>
+
+    <h3>line numbers filter to get the list value with line numbers from the list:  {{ sentence | linenumbers }} </h3><br>
+
+    <h3> lower filter: {{ author | lower }} </h3><br>
+
+    <h3> random filter: {{ lst | random }} </h3><br>
+
+    <h3> word count filter: {{ author | wordcount }} </h3><br>
+
+    <h3> striptags filter: {{ stripexm | striptags }} </h3><br>
+
+    <h3> pluralize filter: 
+    {% for x in lst2 %}
+        <h1>You have {{ x }} kiss{{ x|pluralize:'esss' }} left.</h1>
+    {% endfor %}
+    </h3><br>
+
+    <h3> make list filter: {{ 'Allover' | make_list }} </h3><br>
+
+
+
+
+
+
 
     
 

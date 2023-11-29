@@ -3,7 +3,7 @@ import datetime
 # Create your views here.
 
 def home(request):
-    d = {'author': 'Zaima', 'age': 24, 'lst': ["Dhaka", "chattagram", "Sylhet", "Bandarban"], 'lst2': [1, 2, 3], 'birthday': datetime.datetime.now(), 'val': '','courses': [
+    d = {'author': 'ratul is a very polite guy', 'stripexm': '<b>I</b> <button>love</button> <span>dogs</span>', 'age': 24, 'lst': ["dhaka", "chattagram", "sylhet", "bandarban", "Rangpur"], 'heading': 'Hello &lt;i>my&lt;/i> World!', 'sentence': 'i\nhate \npretty \nu bro', 'lst2': [0, 1, 2, 3], 'birthday': datetime.datetime.now(), 'val': '','courses': [
 
         {
             'id': 19,
