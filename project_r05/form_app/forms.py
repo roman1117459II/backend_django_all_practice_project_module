@@ -68,11 +68,26 @@ class PasswordValidationProject(forms.Form):
     password = forms.CharField(widget= forms.PasswordInput)
     confirm_password = forms.CharField(widget=forms.PasswordInput)
 
+    #for practice
+    comment = forms.CharField(widget=forms.Textarea(attrs={'rows':3}))
+
+    BIRTH_YEAR_CHOICES = ['1980', '1981', '1982']
+    birth_year = forms.DateField(widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES))
+
+    FAVORITE_COLORS_CHOICES = [
+    ('blue', 'Blue'),
+    ('green', 'Green'),
+    ('black', 'Black'),
+    ]
+    favorite_color = forms.ChoiceField(choices=FAVORITE_COLORS_CHOICES)
+
+
     def clean(self):
         cleaned_data = super().clean()
         val_pass = self.cleaned_data["password"]
         val_conpass = self.cleaned_data["confirm_password"] 
         val_name = self.cleaned_data['name']
+        
         
         if val_conpass != val_pass:
             raise forms.ValidationError("Password doesn't match!")
