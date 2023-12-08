@@ -2,5 +2,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name= "homepage"),
+    path('delete/<int:roll>', views.delete_spouse, name= "delete_spouse"),
 ]
