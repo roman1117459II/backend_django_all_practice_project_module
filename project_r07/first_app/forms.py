@@ -11,7 +11,7 @@ class StudentForm(forms.ModelForm):
         }
 
         widgets = {
-            'name' : forms.TextInput(attrs={'class' : 'TextInput'}),
+            'name' : forms.TextInput(attrs={'class' : 'text-input'}),
         }
         
         help_texts = {
@@ -19,9 +19,7 @@ class StudentForm(forms.ModelForm):
         }
 
         error_messages = {
-            'name' : {'required': 'Your name is required'},
-            
-        
+            'name' : {'required': 'Your name is required bro'},
         }
 
 
